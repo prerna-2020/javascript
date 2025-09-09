@@ -4,7 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
+    <!-- Basic CSS-->
     <style>
+      html,
+      body {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        text-align: center;
+      }
       .mainBlock {
         width: 300px;
         margin: 2em auto;
@@ -82,43 +91,52 @@
     </style>
   </head>
   <body>
-    <div class="mainBlock">
-      <div class="inputField">
-        <input type="text" name="inputVal" id="inputVal" value="" readonly />
-      </div>
-      <div class="btnBlock">
-        <button type="button" class="operands" onclick="clearInput()">C</button>
-        <button type="button" class="operands" onclick="appendInput('%')">
-          %
-        </button>
-        <button type="button" class="operands" onclick="appendInput('/')">
-          /
-        </button>
-        <button type="button" class="operands" onclick="appendInput('*')">
-          *
-        </button>
-        <button type="button" onclick="appendInput('7')">7</button>
-        <button type="button" onclick="appendInput('8')">8</button>
-        <button type="button" onclick="appendInput('9')">9</button>
-        <button type="button" class="operands" onclick="appendInput('+')">
-          +
-        </button>
-        <button type="button" onclick="appendInput('4')">4</button>
-        <button type="button" onclick="appendInput('5')">5</button>
-        <button type="button" onclick="appendInput('6')">6</button>
-        <button type="button" class="operands" onclick="appendInput('-')">
-          -
-        </button>
-        <button type="button" onclick="appendInput('1')">1</button>
-        <button type="button" onclick="appendInput('2')">2</button>
-        <button type="button" onclick="appendInput('3')">3</button>
-        <button type="button" class="operands" onclick="appendInput('=')">
-          =
-        </button>
-        <button type="button" onclick="appendInput('0')">0</button>
-      </div>
-      <div class="error">
-        <p id="error"></p>
+    <!--Main Container -->
+    <div class="container">
+      <h1>Calculator App</h1>
+      <div class="mainBlock">
+        <div class="inputField">
+          <input type="text" name="inputVal" id="inputVal" value="" readonly />
+        </div>
+        <!-- Calculator Buttons-->
+        <div class="btnBlock">
+          <button type="button" class="operands" onclick="clearInput()">
+            C
+          </button>
+          <button type="button" class="operands" onclick="appendInput('%')">
+            %
+          </button>
+          <button type="button" class="operands" onclick="appendInput('/')">
+            /
+          </button>
+          <button type="button" class="operands" onclick="appendInput('*')">
+            *
+          </button>
+          <button type="button" onclick="appendInput('7')">7</button>
+          <button type="button" onclick="appendInput('8')">8</button>
+          <button type="button" onclick="appendInput('9')">9</button>
+          <button type="button" class="operands" onclick="appendInput('+')">
+            +
+          </button>
+          <button type="button" onclick="appendInput('4')">4</button>
+          <button type="button" onclick="appendInput('5')">5</button>
+          <button type="button" onclick="appendInput('6')">6</button>
+          <button type="button" class="operands" onclick="appendInput('-')">
+            -
+          </button>
+          <button type="button" onclick="appendInput('1')">1</button>
+          <button type="button" onclick="appendInput('2')">2</button>
+          <button type="button" onclick="appendInput('3')">3</button>
+          <button type="button" class="operands" onclick="appendInput('=')">
+            =
+          </button>
+          <button type="button" onclick="appendInput('0')">0</button>
+        </div>
+
+        <!-- Error  Block -->
+        <div class="error">
+          <p id="error"></p>
+        </div>
       </div>
     </div>
     <script src="calculator.js"></script>
