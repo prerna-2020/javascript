@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dice Roller using Js</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      img {
+        max-width: 100%;
+      }
+      form {
+        width: 400px;
+        box-shadow: 0 0 10px #393939;
+        margin: 4em auto;
+        padding: 30px 20px;
+        background-color: #262626;
+        text-align: center;
+        color: white;
+        text-align: center;
+      }
+      button {
+        padding: 8px 15px;
+        background-color: white;
+        color: black;
+        border: 0px;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .inputField {
+        margin: 20px 0px;
+      }
+      input[type="number"] {
+        display: inline-block;
+        padding: 7px 5px;
+        border: 1px solid #dadada;
+        border-radius: 6px;
+        margin: 10px 0px;
+      }
+      .diceImages {
+        margin: 1.5em 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .diceImages img {
+        width: 80px;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <main>
+        <form id="diceForm">
+          <h2>Dice Roller</h2>
+          <div class="inputField">
+            <button type="button" id="submit">Roll Dice</button>
+          </div>
+
+          <div id="resultBlock">
+            <p>Dice Values : <span></span></p>
+            <div class="diceImages"></div>
+          </div>
+        </form>
+      </main>
+    </div>
+
+    <script src="diceRoller.js"></script>
+  </body>
+</html>
