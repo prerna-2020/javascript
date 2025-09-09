@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      .mainBlock {
+        width: 300px;
+        margin: 2em auto;
+        padding: 20px;
+        border: 1px solid #373737;
+        background-color: #373737;
+        border-radius: 6px;
+        position: relative;
+      }
+      input {
+        padding: 8px;
+        display: block;
+        width: 95%;
+        margin: 1em 0px 1.5em;
+        border-radius: 6px;
+        border: 0;
+        background-color: #202020;
+        font-size: 20px;
+        text-align: right;
+        color: white;
+        outline: 2px solid #4f4f4f;
+        outline-offset: 5px;
+      }
+      input:focus {
+        border: 0px;
+      }
+      .btnBlock {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+      }
+      button {
+        border: 0px;
+        border-radius: 50%;
+        color: white;
+        font-size: 22px;
+        width: 48px;
+        height: 48px;
+        line-height: 40px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        background-color: #202020;
+        outline: 2px solid #4f4f4f;
+        outline-offset: 5px;
+        cursor: pointer;
+      }
+      button:nth-child(4n) {
+        margin-right: 0px;
+      }
+      .operands {
+        background-color: orange;
+      }
+      .error {
+        position: absolute;
+        left: 0;
+        right: 0;
+        text-align: center;
+        margin: 0 auto;
+        bottom: 12px;
+        color: white;
+      }
+      #error {
+        display: none;
+        font-size: 12px;
+        background: black;
+        padding: 6px 12px;
+        border-radius: 6px;
+        /* font-weight: bold; */
+        color: red;
+        letter-spacing: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mainBlock">
+      <div class="inputField">
+        <input type="text" name="inputVal" id="inputVal" value="" readonly />
+      </div>
+      <div class="btnBlock">
+        <button type="button" class="operands" onclick="clearInput()">C</button>
+        <button type="button" class="operands" onclick="appendInput('%')">
+          %
+        </button>
+        <button type="button" class="operands" onclick="appendInput('/')">
+          /
+        </button>
+        <button type="button" class="operands" onclick="appendInput('*')">
+          *
+        </button>
+        <button type="button" onclick="appendInput('7')">7</button>
+        <button type="button" onclick="appendInput('8')">8</button>
+        <button type="button" onclick="appendInput('9')">9</button>
+        <button type="button" class="operands" onclick="appendInput('+')">
+          +
+        </button>
+        <button type="button" onclick="appendInput('4')">4</button>
+        <button type="button" onclick="appendInput('5')">5</button>
+        <button type="button" onclick="appendInput('6')">6</button>
+        <button type="button" class="operands" onclick="appendInput('-')">
+          -
+        </button>
+        <button type="button" onclick="appendInput('1')">1</button>
+        <button type="button" onclick="appendInput('2')">2</button>
+        <button type="button" onclick="appendInput('3')">3</button>
+        <button type="button" class="operands" onclick="appendInput('=')">
+          =
+        </button>
+        <button type="button" onclick="appendInput('0')">0</button>
+      </div>
+      <div class="error">
+        <p id="error"></p>
+      </div>
+    </div>
+    <script src="calculator.js"></script>
+  </body>
+</html>
