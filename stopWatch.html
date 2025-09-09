@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stop Watch</title>
+    <style>
+      .mainBlock {
+        text-align: center;
+        width: 500px;
+        margin: 2em auto;
+        border: 1px solid #c9c5c5;
+        padding: 20px 20px 30px;
+        border-radius: 6px;
+      }
+      #stopWatch {
+        padding: 0;
+        margin: 20px;
+      }
+      li {
+        list-style: none;
+        display: inline-block;
+        font-size: 2em;
+      }
+      button {
+        border: 0px;
+        padding: 6px 15px;
+        border-radius: 6px;
+        color: white;
+        margin: 10px 5px;
+      }
+      .green {
+        background-color: #228322;
+      }
+      .red {
+        background-color: red;
+      }
+      .yellow {
+        background-color: #edad1f;
+      }
+    </style>
+  </head>
+
+  <div class="mainBlock">
+    <h3>Stop Watch</h3>
+    <ul id="stopWatch">
+      <li id="hours">00</li>
+      :
+      <li id="minutes">00</li>
+      :
+      <li id="seconds">00</li>
+      :
+      <li id="milliSec">00</li>
+    </ul>
+
+    <button type="button" id="start" class="green">Start</button>
+    <button type="button" id="reset" class="yellow">Reset</button>
+    <button type="button" id="stop" class="red">Stop</button>
+  </div>
+  <script src="stopWatch.js"></script>
+  <body></body>
+</html>
