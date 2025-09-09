@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock, Paper & Scissors</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+      .container {
+        text-align: center;
+        width: 500px;
+        margin: 2em auto;
+        border: 1px solid #cacaca;
+        padding: 18px 15px;
+        outline: 1px solid #b4b4b4;
+        outline-offset: 8px;
+        box-shadow: 0px 0px 4px #a5a5a5;
+      }
+      .iconsBlock ul,
+      .playerBlock ul {
+        margin: 2em 0px;
+        padding: 12px;
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .playerBlock ul {
+        align-items: flex-start;
+      }
+      .iconsBlock ul {
+        padding: 0px;
+      }
+      .iconsBlock li,
+      #player2Block p {
+        width: 60px;
+        height: 60px;
+        background: #b2eaff;
+        text-align: center;
+        line-height: 60px;
+        font-size: 25px;
+        border-radius: 50%;
+        display: inline-block;
+      }
+      .iconsBlock li:hover {
+        cursor: pointer;
+        outline: 2px solid #7ed8f9;
+        outline-offset: 4px;
+      }
+      .playerBlock > ul > li {
+        flex: 1;
+      }
+      .playerBlock li:first-child {
+        border-right: 3px dashed #c0c0c0;
+      }
+      .iconsBlock li:first-child {
+        border: 0;
+      }
+      .playerBlock h5 {
+        font-size: 20px;
+        margin: 0px;
+      }
+      #player2Block p {
+        display: none;
+        margin: 1.8em 0;
+      }
+      .green {
+        color: green;
+      }
+      .red {
+        color: red;
+      }
+      button {
+        border: 0px;
+        background: #b2eaff;
+        /* color: white; */
+        padding: 8px 15px;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+        font-size: 18px;
+        outline: 2px solid #7ed8f9;
+        outline-offset: 4px;
+        cursor: pointer;
+      }
+      #winnerBlock {
+        display: none;
+        margin-top: 28px;
+        color: green;
+      }
+      #winnerBlock.normal {
+        font-size: 18px;
+        color: black;
+        font-weight: normal;
+      }
+      .iconsBlock li.disabled,
+      button.disabled {
+        cursor: not-allowed;
+        background-color: #d9d9d9;
+        opacity: 0.5;
+      }
+      .iconsBlock li.disabled:hover {
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Rock - Paper - Scissors</h2>
+
+      <div class="playerBlock">
+        <ul>
+          <li id="player1Block">
+            <h5>You <span id="scoreOne"></span></h5>
+            <ul class="iconsBlock">
+              <li id="rock" onclick="selected(event,'rock')" class="disabled">
+                &#9994;
+              </li>
+              <li id="paper" onclick="selected(event,'paper')" class="disabled">
+                &#9995;
+              </li>
+              <li
+                is="scissors"
+                onclick="selected(event,'scissors')"
+                class="disabled"
+              >
+                &#9996;
+              </li>
+            </ul>
+          </li>
+          <li id="player2Block">
+            <h5>Computer <span id="scoreTwo"></span></h5>
+            <p></p>
+          </li>
+        </ul>
+      </div>
+      <button onclick="startGame()" id="start">Start</button>
+
+      <div class="resultBlock">
+        <h1 id="winnerBlock"></h1>
+      </div>
+    </div>
+    <script src="rockPaperScissor.js"></script>
+  </body>
+</html>
